@@ -22,6 +22,7 @@ gulp.task('browserify', function() {
     var bundler = browserify({
         entries: [config.dev.base + 'index.js'],
         debug: true,
+        standalone : 'flyd',
         cache: {},
         packageCache: {},
         fullPaths: true
