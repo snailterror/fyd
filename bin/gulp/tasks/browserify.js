@@ -14,10 +14,6 @@ var rename = require('gulp-rename');
 var config = require('../configs/config.js');
 
 gulp.task('browserify', function() {
-    /*
-     * Cette chose nous permet d'avoir un vrai environnement de dev js avec des require()
-     * Par exemple pour appeler jquery (après l'avoir installer avec npm) > $ = require('jquery')
-     * On peut maintenant utiliser jquery avec la variable $ */
 
     var bundler = browserify({
         entries: [config.dev.base + 'index.js'],
