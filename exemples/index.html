@@ -39,5 +39,31 @@
 
     <script src="build/build.js"></script>
 
+    <script>
+
+
+        var doge = fyd('#doge');
+        var shibe = fyd('.shibe');
+
+        console.log(fyd('#doge'));
+
+        doge.addClass('moon');
+
+        shibe.addClass('wow');
+        shibe.removeClass('shibe');
+        shibe.addClass('works');
+        //console.log(shibe.hasClass('test'));
+        shibe.withClass('test');
+
+        //shibe.status();
+
+        shibe.attr('yo');
+
+        fyd('#doge').attr('yo', 'not be upset');
+
+        console.log(doge.hasAttr('yo'));
+        //console.log(doge.removeAttr('yo'));
+    </script>
+
     </body>
 </html>
