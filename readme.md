@@ -1,5 +1,4 @@
 # Fyd
----
 ### Follow your dreams
 
 Simple DOM selector :

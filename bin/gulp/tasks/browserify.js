@@ -21,10 +21,9 @@ gulp.task('browserify', function() {
         standalone : 'fyd',
         cache: {},
         packageCache: {},
-        fullPaths: true
-    }).transform(babelify.configure({
-        optional : "es7"
-    }));
+        fullPaths: true,
+        sourcemap: true
+    }).transform(babelify);
 
     var watcher  = watchify(bundler);
 
@@ -41,9 +40,7 @@ gulp.task('browserify', function() {
                 .pipe(gulp.dest(config.dev.js));
             console.log('Such build : ', (Date.now() - updateStart) + 'ms');
         })
-        .transform(babelify.configure({
-            optional : "es7"
-        }))
+        .transform(babelify)
         .bundle() // Cré le bundle initial lors du lancement de la commande
         .on('error', gutil.log.bind(gutil, 'Browserify Error', gutil.colors.red('411')))
         .pipe(source(config.dev.base + 'index.js'))
