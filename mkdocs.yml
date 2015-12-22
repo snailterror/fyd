@@ -3,6 +3,6 @@ repo_url: https://github.com/snailterror/fyd/
 pages:
 - Home: index.md
 - Docs:
-  - 'Getting started': 'documentations/about.md'
+  - 'Getting started': 'documentations/getting-started.md'
 - About: about.md
 theme: flatly
