@@ -1,6 +1,6 @@
-# Welcome to MkDocs
+# Fyd
 
-For full documentation visit [mkdocs.org](http://mkdocs.org).
+For full documentation visit [snailterror/fyd](http://snailterror.github.io/fyd/).
 
 ## Commands
 

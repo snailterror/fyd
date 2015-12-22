@@ -1,5 +1,8 @@
 site_name: Fyd
+repo_url: https://github.com/snailterror/fyd/
 pages:
 - Home: index.md
+- Docs:
+  - 'Getting started': 'documentations/about.md'
 - About: about.md
 theme: flatly
