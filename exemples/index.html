@@ -15,6 +15,9 @@
             article.shibe{
                 line-height: 2;
             }
+            article.shibe.test{
+                font-size: 20px;
+            }
         </style>
     </head>
     <body>
@@ -40,25 +43,15 @@
     <script src="build/build.js"></script>
 
     <script>
+        var $ = fyd;
 
+        var test = $('.shibe');
 
-        var doge = fyd('#doge');
-        var shibe = fyd('.shibe');
-        doge.addClass('moon');
-        shibe.addClass('wow');
-        shibe.removeClass('shibe');
-        shibe.addClass('works');
-        console.log(shibe.hasClass('test'));
-        shibe.withClass('test');
+        test.addClass('test');
+        test.attr('test', 'yo');
 
-        //shibe.status();
+        console.log(test);
 
-        shibe.attr('yo');
-
-        fyd('#doge').attr('yo', 'not be upset');
-
-        console.log(doge.hasAttr('yo'));
-        //console.log(doge.removeAttr('yo'));
     </script>
 
     </body>
