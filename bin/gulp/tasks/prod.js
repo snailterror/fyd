@@ -6,7 +6,7 @@ var runSequence = require('run-sequence');
 var config = require('../configs/config.js');
 
 // Tasks
-require('./browserify-prod');
+require('./browserify');
 
 gulp.task('prod', function(callback){
 

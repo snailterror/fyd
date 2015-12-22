@@ -9,7 +9,8 @@ var buffer     = require('vinyl-buffer');
 var browserify = require('browserify');
 var watchify   = require('watchify');
 var babelify   = require('babelify');
-var rename = require('gulp-rename');
+var uglify     = require('gulp-uglify');
+var rename     = require('gulp-rename');
 
 var config = require('../configs/config.js');
 
@@ -46,4 +47,22 @@ gulp.task('browserify', function() {
         .pipe(source(config.dev.base + 'index.js'))
         .pipe(rename('build.js'))
         .pipe(gulp.dest(config.dev.js));
+});
+
+
+gulp.task('browserify-prod', function() {
+
+    var bundler = browserify({
+        entries: [config.dev.base + 'index.js'],
+        debug: true,
+        cache: {}, packageCache: {}, fullPaths: true
+    }).transform(babelify);
+
+    bundler
+        .bundle()
+        .on('error', gutil.log.bind(gutil, 'Browserify Error', gutil.colors.red('411')))
+        .pipe(source(config.dev.base + 'index.js'))
+        .pipe(buffer())
+        .pipe(uglify())
+        .pipe(gulp.dest(config.prod));
 });
