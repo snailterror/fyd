@@ -1,0 +1,5 @@
+site_name: Fyd
+pages:
+- Home: index.md
+- About: about.md
+theme: flatly
