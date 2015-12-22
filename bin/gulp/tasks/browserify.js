@@ -49,20 +49,25 @@ gulp.task('browserify', function() {
         .pipe(gulp.dest(config.dev.js));
 });
 
-
 gulp.task('browserify-prod', function() {
 
     var bundler = browserify({
         entries: [config.dev.base + 'index.js'],
         debug: true,
-        cache: {}, packageCache: {}, fullPaths: true
+        standalone : 'fyd',
+        cache: {},
+        packageCache: {},
+        fullPaths: true,
+        sourcemap: true
     }).transform(babelify);
 
     bundler
-        .bundle()
+        .transform(babelify)
+        .bundle() // Cré le bundle initial lors du lancement de la commande
         .on('error', gutil.log.bind(gutil, 'Browserify Error', gutil.colors.red('411')))
         .pipe(source(config.dev.base + 'index.js'))
         .pipe(buffer())
         .pipe(uglify())
+        .pipe(rename('fyd.min.js'))
         .pipe(gulp.dest(config.prod));
 });

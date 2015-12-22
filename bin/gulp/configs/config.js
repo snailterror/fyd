@@ -4,5 +4,5 @@ module.exports = {
         "js": "../build/",
         "html": "../exemples/"
     },
-    "prod": "./dist/"
+    "prod": "../dist/"
 };
