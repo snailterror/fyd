@@ -79,12 +79,24 @@ describe('Work with text', () => {
 describe('Misc', () => {
 
     jsdom({
-        html : '<p class="doge">Just wow</p>'
+        html : '<p class="doge">Just wow</p><div class="bonjour">Div 1</div><div class="bonjour">Div 2</div><div class="bonjour">Div 3</div>'
     });
 
     it('Remove element', () => {
         let div = fyd('p').remove();
         expect(div).to.equal(undefined);
+    });
+
+    it('Get first element text', () => {
+        let div = fyd('.bonjour');
+        let firstElement = div.first().text();
+        expect(firstElement).to.equal('Div 1');
+    });
+
+    it('Get last element text', () => {
+        let div = fyd('.bonjour');
+        let firstElement = div.last().text();
+        expect(firstElement).to.equal('Div 3');
     });
 
 });
