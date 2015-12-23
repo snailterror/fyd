@@ -1,7 +1,7 @@
 # Fyd
 ### Follow your dreams
 
-![enter image description here](https://img.shields.io/travis/snailterror/fyd.svg) ![enter image description here](https://img.shields.io/npm/v/slush-suchkit.svg) ![enter image description here](https://img.shields.io/npm/l/fyd.svg)
+![enter image description here](https://img.shields.io/travis/snailterror/fyd.svg) ![enter image description here](https://img.shields.io/npm/v/fyd.svg) ![enter image description here](https://img.shields.io/npm/l/fyd.svg)
 
 > This is beta version
 
