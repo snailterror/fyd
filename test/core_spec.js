@@ -76,3 +76,15 @@ describe('Work with text', () => {
 
 });
 
+describe('Misc', () => {
+
+    jsdom({
+        html : '<p class="doge">Just wow</p>'
+    });
+
+    it('Remove element', () => {
+        let div = fyd('p').remove();
+        expect(div).to.equal(undefined);
+    });
+
+});
