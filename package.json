@@ -13,7 +13,7 @@
     "dom"
   ],
   "author": "Adrien Espel",
-  "license": "ISC",
+  "license": "MIT",
   "homepage": "https://bitbucket.org/Snailterror/fyd#readme",
   "scripts": {
     "start": "gulp dev --gulpfile bin/gulpfile.js",
