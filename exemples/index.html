@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Fyd</title>
+        <style>
+            html, body, p {
+                padding: 0;
+                margin: 0;
+            }
+            section#doge{
+                background: #66a5bf;
+                height: 500px;
+            }
+            article.shibe{
+                line-height: 2;
+            }
+            article.shibe.test{
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+
+    <section id="doge" yo="mais loooool">
+        <article class="shibe test" yo="yoyoyo">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt dignissimos explicabo magnam mollitia neque, ratione! Ad consequatur dolorum, eaque ex fugit laborum magnam maiores nemo non omnis optio rerum veritatis!
+            </p>
+        </article>
+        <article class="shibe">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt dignissimos explicabo magnam mollitia neque, ratione! Ad consequatur dolorum, eaque ex fugit laborum magnam maiores nemo non omnis optio rerum veritatis!
+            </p>
+        </article>
+        <article class="shibe test">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt dignissimos explicabo magnam mollitia neque, ratione! Ad consequatur dolorum, eaque ex fugit laborum magnam maiores nemo non omnis optio rerum veritatis!
+            </p>
+        </article>
+    </section>
+
+    <script src="build/build.js"></script>
+
+    <script>
+
+        var $ = fyd;
+
+        var test = $('.shibe');
+
+        test.addClass('test');
+        test.attr('test', 'yo');
+
+        console.log(test.hasClass('shibe'));
+        console.log(test.hasAttr('test'));
+        console.log(test);
+        console.log(test.first());
+        console.log(test.last());
+
+
+    </script>
+
+    </body>
+</html>
