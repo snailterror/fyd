@@ -49,4 +49,30 @@ describe('Work with text', () => {
         expect(div.text()).to.equal('Hello Doge');
     });
 
+    it('Edit inner html', () => {
+        let div = fyd('p');
+        div.html('<span>yo</span>');
+        expect(div.html()).to.equal('<span>yo</span>');
+    });
+
+    it('Set attribute', () => {
+        let div = fyd('p');
+        div.attr('yo', 'the value');
+        expect(div.hasAttr('yo')).to.equal(true);
+    });
+
+    it('Get attribute', () => {
+        let div = fyd('p');
+        div.attr('yo', 'the value');
+        expect(div.attr('yo')).to.equal('the value');
+    });
+
+    it('Remove attribute', () => {
+        let div = fyd('p');
+        div.attr('yo', 'the value');
+        div.removeAttr('yo');
+        expect(div.hasAttr('yo')).to.equal(false);
+    });
+
 });
+
